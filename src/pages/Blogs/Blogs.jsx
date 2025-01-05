@@ -102,7 +102,7 @@ const Blogs = () => {
             </div>
 
             {/* Content */}
-            <Header className="relative z-10" />
+            <Header className="relative !z-[100]" />
 
             <div className="h-[700px]">
               <h2 className="lg:text-[130px] text-[60px] font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40"
