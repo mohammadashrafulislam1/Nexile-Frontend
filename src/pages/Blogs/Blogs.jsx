@@ -123,7 +123,7 @@ const Blogs = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="md:p-12 lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] z-24 relative">
+          <div className="md:p-12 lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] relative">
             <div className="animated-border-input animated-border-btn flex justify-center mx-auto md:w-[70%] my-12">
               <input
                 type="text"
