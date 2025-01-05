@@ -1,0 +1,1 @@
+export const endPoint = "https://nexile-backend.vercel.app/api"
