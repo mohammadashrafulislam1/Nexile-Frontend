@@ -52,7 +52,7 @@ const FAQs = () => {
           />
         </div>
 
-        <div className="lg:w-[60%] w-full mt-24">
+        <div className="lg:w-[60%] w-full mt-24 z-10">
           {faqs.faqs?.slice(0, 4).map((faq, index) => (
             <div
               key={index}

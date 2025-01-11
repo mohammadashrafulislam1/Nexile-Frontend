@@ -102,7 +102,7 @@ const Blogs = () => {
             </div>
 
             {/* Content */}
-            <Header className="relative !z-[100]" />
+            <Header className="relative !z-[300]" />
 
             <div className="h-[700px]">
               <h2 className="lg:text-[130px] text-[60px] font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40"
@@ -123,7 +123,7 @@ const Blogs = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="md:p-12 lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] relative">
+          <div className="md:p-12 !z-[-1] lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] relative">
             <div className="animated-border-input animated-border-btn flex justify-center mx-auto md:w-[70%] my-12">
               <input
                 type="text"
@@ -164,7 +164,7 @@ const Blogs = () => {
             </div>
 
             {/* Blogs Category (Desktop) */}
-            <div className="hidden md:flex items-center justify-start gap-2 mb-10">
+            <div className="hidden md:flex z-[100] items-center justify-start gap-2 mb-10">
               <button
                 onClick={handleAllCategoriesClick}
                 className="animated-border-btn text-white poppins-regular text-[20px] bg-[#141414] px-2 py-1 rounded-full"
@@ -183,7 +183,7 @@ const Blogs = () => {
             </div>
 
             {/* Display filtered blogs */}
-            <div className="grid lg:grid-cols-2 lg:p-0 md:p-12  items-center justify-start gap-5 mt-10">
+            <div className="grid lg:grid-cols-2 lg:p-0 md:p-12  items-center justify-start gap-5 mt-24">
               {filteredBlogs?.map(blog => (
                 <BlogCard key={blog._id} blog={blog} />
               ))}

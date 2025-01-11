@@ -83,10 +83,10 @@ const Testimonials = () => {
         <div
     className="absolute bottom-0 hidden md:block left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"
   ></div>
-        <div className="lg:col-span-1 col-span-1 z-20 md:z-96">
+        <div className="lg:col-span-1 col-span-1">
          <img src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1734735974/nexile%20digital/asset/k3gel9qz6m3wb5gxtanm.webp" alt="" />
         </div>
-        <div className="lg:col-span-2 col-span-1 z-60">
+        <div className="lg:col-span-2 col-span-1 ">
         <Swiper
       spaceBetween={4}
       pagination={{ clickable: true }}
@@ -96,7 +96,7 @@ const Testimonials = () => {
         1024: { slidesPerView: 1.2 },
       }}
       modules={[Pagination]}
-      className="mySwipe relative"
+      className="mySwipe"
       onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       onSwiper={(swiper) => setActiveIndex(swiper.activeIndex)}
     >
@@ -108,19 +108,25 @@ const Testimonials = () => {
           }`}
         >
           <div className="flex flex-col items-start p-6 rounded-lg">
-          <p
-  className="mt-4 mb-10 z-50 text-white text-start md:text-[26px] text-[18px] poppins-regular relative"
+          <div
+  className="mt-4 mb-10 text-white text-start md:text-[26px] text-[18px] poppins-regular"
 >
   {expandedTestimonials[testimonial._id]
     ? testimonial.testimonialText
     : `${testimonial.testimonialText.slice(0, 164)}...`}
-  <span
-    className="text-[#00ECFB] cursor-pointer underline relative z-60"
-    onClick={() => toggleReadMore(testimonial._id)}
-  >
-    {expandedTestimonials[testimonial._id] ? "See Less" : "See More"}
-  </span>
+  <p
+  className="text-[#00ECFB] cursor-pointer underline"
+  onClick={() => {
+    console.log("Toggling testimonial:", testimonial._id);
+    toggleReadMore(testimonial._id);
+  }}
+>
+  {expandedTestimonials[testimonial._id] ? "See Less" : "See More"}
 </p>
+
+
+</div>
+
 
 
             

@@ -18,7 +18,7 @@ const Header = () => {
                 console.error("Error fetching header data:", error);
             } finally {
                 // Set a timeout for loader to hide after 3 seconds if data fetch is complete
-        const timer = setTimeout(() => setLoading(false), 2000);
+        const timer = setTimeout(() => setLoading(false), 500);
 
         return () => clearTimeout(timer); // Clear the timer on component unmount
             }
@@ -74,30 +74,36 @@ const Header = () => {
 
                     {/* Dropdown overlay */}
                     {isDropdownOpen && (
-                        <div className="fixed inset-0 !z-[200] lg:hidden bg-black bg-opacity-100 z-50 flex flex-col p-4 text-white">
-                            <button 
-                                onClick={() => setIsDropdownOpen(false)} 
-                                className="text-2xl ml-auto mb-4"
-                            >
-                                ✖
-                            </button>
-                            <img 
-                                src={header[0]?.logo || ''} 
-                                alt={`${header[0]?.title || ''} ${header[0]?.description || ''}`} 
-                                className="w-[250px] h-[50px] mb-10"
-                            />
-                            <div className="text-center no-underline space-y-6 text-[18px] font-light poppins-regular">
-                                {header[0]?.menu && header[0].menu.map(item => (
-                                    <Link to={item?.link} key={item._id}>
-                                        <p className="mb-2 no-underline bg-white bg-opacity-60 
-                                        text-black px-24 py-2 rounded-md">
-                                            {item?.name}
-                                        </p>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
-                    )}
+    <div
+        className="fixed inset-0 z-[9999] lg:hidden bg-black bg-opacity-100 flex flex-col p-4 text-white"
+    >
+        <button
+            onClick={() => setIsDropdownOpen(false)}
+            className="text-2xl ml-auto mb-4"
+        >
+            ✖
+        </button>
+        <img
+            src={header[0]?.logo || ''}
+            alt={`${header[0]?.title || ''} ${header[0]?.description || ''}`}
+            className="w-[250px] h-[50px] mb-10"
+        />
+        <div className="text-center no-underline space-y-6 text-[18px] font-light poppins-regular">
+            {header[0]?.menu &&
+                header[0].menu.map((item) => (
+                    <Link to={item?.link} key={item._id}>
+                        <p
+                            className="mb-2 no-underline bg-white bg-opacity-60 
+                            text-black px-24 py-2 rounded-md"
+                        >
+                            {item?.name}
+                        </p>
+                    </Link>
+                ))}
+        </div>
+    </div>
+)}
+
                 </div>
             )}
         </div>

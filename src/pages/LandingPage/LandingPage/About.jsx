@@ -121,7 +121,7 @@ const About = ()=>{
       </h2>
       <div>
         <p className="font-[100] text-white text-[20px]">{about?.sectionDes}</p>
-        <Link to="/">
+        <Link to="/about_us" className="relative z-10">
           <img
             src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1732024726/nexile%20digital/assets/ejj6ajpv5ykj5qdgeqmi.png"
             className="lg:w-[125px] w-[80px] ml-10"
@@ -135,12 +135,13 @@ const About = ()=>{
 {/* Option 1 */}
 <div className="lg:flex items-center gap-10 relative md:px-10 p-3 group mt-10">
 <div>
+<Link to="/about_us">
 <div
 className="border-2 lg:text-[40px] mt-1 md:mt-0 md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-3 md:px-3 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center md:col-span-1 
 bg-white text-black transition duration-300 z-10 md:block hidden absolute lg:top-[40%] md:top-[30%] top-0 left-0 opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_10px_15px_rgba(0,236,251,0.4)]"
 >
 <BsArrowLeft />
-</div>
+</div></Link>
 <div className="lg:w-[300px] w-full lg:h-[300px] h-full hidden group-hover:block transition duration-300 transform">
 <img
 src={about?.ourStory?.image?.url}
@@ -160,12 +161,13 @@ className="lg:w-[300px] w-full lg:h-[300px] h-full object-cover object-center"
 <div className="lg:flex items-center flex-row-reverse gap-10 relative md:px-10 p-3 group mt-10">
 <div>
 <div className="lg:w-[300px] w-full lg:h-[300px] h-full  hidden group-hover:block transition duration-300 transform">
-<div
+
+<Link to="/about_us"><div
 className="border-2 lg:text-[40px] mt-1 md:mt-0 md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-3 md:px-3 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center md:col-span-1 
 bg-white text-black transition duration-300 md:block hidden absolute top-[40%] right-0 opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_10px_15px_rgba(0,236,251,0.4)]"
 >
 <BsArrowRight />
-</div>
+</div></Link>
 <img
 src={about?.ourMission?.image?.url}
 alt={about?.ourMission?.description}
@@ -183,12 +185,13 @@ className="lg:w-[300px] w-full lg:h-[300px] h-full  object-cover object-center"
 {/* Option 3 */}
 <div className="lg:flex items-center gap-10 relative md:px-10 p-3 group mt-10 mb-10">
 <div>
+<Link to="/about_us">
 <div
 className="border-2 lg:text-[40px] mt-1 md:mt-0 md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-3 md:px-3 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center md:col-span-1 
 bg-white text-black z-10 transition duration-300 md:block hidden absolute top-[40%] left-0 opacity-0 group-hover:opacity-100 group-hover:shadow-[0_0_10px_15px_rgba(0,236,251,0.4)]"
 >
 <BsArrowLeft />
-</div>
+</div></Link>
 <div className="lg:w-[300px] w-full lg:h-[300px] h-full  hidden group-hover:block transition duration-300 transform">
 <img
 src={about?.ourVision?.image?.url}

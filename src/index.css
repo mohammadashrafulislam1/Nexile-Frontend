@@ -228,10 +228,15 @@
 }
 
 .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
-  position: absolute;
-  top: 0;
-  left: -350px;
+ 
 }
+
+
+.mySwipe .swiper-wrapper{
+  z-index: 100;
+  position: relative;
+}
+
 /* Container styles */
 .animated-border-btn {
   position: relative;
@@ -303,8 +308,6 @@
   outline: none;
   position: relative;
 }
-
-
 
 @tailwind base;
 @tailwind components;

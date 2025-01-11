@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { endPoint } from "../../../Components/ForAll/ForAll";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -70,11 +71,11 @@ const Blogs = () => {
               <p className="text-[#00ECFB] text-[20px] poppins-semibold mt-4">{blog.category}</p>
               <p className="text-[#fff] text-[20px] mt-4"><b className="poppins-black ">.  </b>{formatDate(blog.created_at)}</p>
               </div>
-              <a
-                href={`/blog/${blog._id}`}
+              <Link
+                to={`/blog/${blog.title.replace(/\s+/g, "-")}`}
                 className="text-blue-500 mt-4 inline-block mt-0"
               > <h3 className="text-white text-[24px] font-semibold">{blog.title}</h3>
-              </a>
+              </Link>
              </div>
               {/* Black shadow at the bottom */}
 <div
@@ -113,10 +114,10 @@ const Blogs = () => {
               <p className="text-[#fff] text-[20px] mt-4">{formatDate(blog.created_at)}</p>
               
               <p className="text-[#00ECFB] text-[20px] poppins-semibold">{blog.category}</p>
-              <a
-                href={`/blog/${blog._id}`}
-                className="text-blue-500 inline-block z-10 relative"
-              ><h3 className="text-white text-[24px] font-semibold z-10">{blog.title}</h3></a>
+              <Link
+                to={`/blog/${blog.title.replace(/\s+/g, "-")}`}
+                className="text-blue-500 mt-4 inline-block mt-0"
+              > <h3 className="text-white text-[24px] font-semibold z-10">{blog.title}</h3></Link>
               </div>
             </div>
           ))

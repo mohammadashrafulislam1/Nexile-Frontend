@@ -143,7 +143,7 @@ const Founder = () => {
             </div>
           </div>
 
-          <a href="" target="_blank"><div className="flex justify-center items-center gap-3">
+          <a href="/team" target="_blank"><div className="flex justify-center items-center gap-3">
             <h4 className="text-white poppins-thin md:text-4xl text-2xl">Meet Our Team</h4> <img 
           src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1732024726/nexile%20digital/assets/ejj6ajpv5ykj5qdgeqmi.png" 
           alt="" 
