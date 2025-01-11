@@ -5,6 +5,7 @@ import Footer from "../../Components/ForAll/Footer";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { endPoint } from "../../Components/ForAll/ForAll";
+import './Team.css'
 
 const Team =()=>{
     const [team, setTeam] = useState([])
@@ -71,7 +72,7 @@ const Team =()=>{
 
      <div className=" h-[1040px]">
      <h2 className="lg:text-[130px] text-[60px] font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40" 
-             style={{letterSpacing:'-5px'}}>Team members of nexile digita</h2>
+             style={{letterSpacing:'-5px'}}>Team members of nexile digital</h2>
       <p className="lg:text-[30px] text-[20px] text-white font-[100] text-center">know more about our digital solutions providers.</p>
       <Link to={"/contact_us"} className="flex justify-center my-4">
         <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
@@ -91,29 +92,49 @@ const Team =()=>{
 
     
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-10 mb-24 mt-[-400px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 mb-24 
+    lg:mt-[-600px] relative mt-[-750px]">
   {team.map((member) => (
-    <div className="card">
-    <div className="shine"></div>
-    <div className="imgBx">
-      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-    </div>
-    <div className="content">
-      <div className="details">
-        <h2>{member.name}<br /><span>{member.role}</span></h2>
-        <div className="data">
-          <h3>{member.detail}</h3>
-        </div>
-        <div className="actionBtn">
-          <button className="bg-blue-500 text-white">Follow</button>
-          <button className="bg-gray-500 text-white">Message</button>
+    <div className="card relative overflow-hidden group rounded-lg p-[2px] bg-gradient-to-r from-[#9DE8EE] via-[#FA7C0B] to-[#9F8CED] shadow-lg hover:shadow-xl transition duration-300">
+      <div className="shine"></div>
+      <div className="background ">
+      <div className="tiles">
+        <div className="tile tile-1"></div>
+        <div className="tile tile-2"></div>
+        <div className="tile tile-3"></div>
+        <div className="tile tile-4"></div>
+
+        <div className="tile tile-5"></div>
+        <div className="tile tile-6"></div>
+        <div className="tile tile-7"></div>
+        <div className="tile tile-8"></div>
+
+        <div className="tile tile-9"></div>
+        <div className="tile tile-10"></div>
+      </div>
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+      </div>
+      <div className="bg-[#121212] rounded-xl ">
+      <div className="imgBx mx-auto">
+        <img src={member.image} alt={member.name} className="w-[200px] h-[200px] object-cover rounded-md z-4 scale-110" />
+      </div>
+      <div className="content p-4">
+        <div className="details text-center">
+          <h2 className="text-lg font-semibold text-white poppins-regular text-[26px]">{member.name}<br />
+            <span className="text-gray-400 text-sm poppins-extralight mt-0">{member.role}</span>
+          </h2>
+          <div className="data mt-2">
+            <h3 className="text-sm text-gray-400 poppins-regular text-[22px]">{member.detail}</h3>
+          </div>
         </div>
       </div>
+      </div>
     </div>
-  </div>
-  
   ))}
 </div>
+
 
        
       <Footer className="!z-24"/>
