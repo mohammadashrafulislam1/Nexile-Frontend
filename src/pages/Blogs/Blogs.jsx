@@ -123,7 +123,7 @@ const Blogs = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="md:p-12 !z-[-1] lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] relative">
+          <div className="md:p-12 !z-[10] lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] relative">
             <div className="animated-border-input animated-border-btn flex justify-center mx-auto md:w-[70%] my-12">
               <input
                 type="text"
@@ -164,7 +164,7 @@ const Blogs = () => {
             </div>
 
             {/* Blogs Category (Desktop) */}
-            <div className="hidden md:flex z-[100] items-center justify-start gap-2 mb-10">
+            <div className="hidden md:flex z-[100] items-center justify-start z-12 relative gap-2 mb-10">
               <button
                 onClick={handleAllCategoriesClick}
                 className="animated-border-btn text-white poppins-regular text-[20px] bg-[#141414] px-2 py-1 rounded-full"
