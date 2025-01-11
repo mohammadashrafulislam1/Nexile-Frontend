@@ -309,6 +309,194 @@
   position: relative;
 }
 
+
+/* Card styling */
+body {
+  --background-color: #18181B;
+  --text-color: #A1A1AA;
+  
+  --card-background-color: rgba(255, 255, 255, .015);
+  --card-border-color: rgba(255, 255, 255, 0.1);
+  --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+  --card-box-shadow-1-y: 3px;
+  --card-box-shadow-1-blur: 6px;
+  --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+  --card-box-shadow-2-y: 8px;
+  --card-box-shadow-2-blur: 15px;
+  --card-label-color: #FFFFFF;
+  --card-icon-color: #D4D4D8;
+  --card-icon-background-color: rgba(255, 255, 255, 0.08);
+  --card-icon-border-color: rgba(255, 255, 255, 0.12);
+  --card-shine-opacity: .1;
+  --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, rgba(52, 211, 153, 0.18) 295deg, rgba(16, 185, 129, 0) 360deg);
+  --card-line-color: #2A2B2C;
+  --card-tile-color: rgba(16, 185, 129, 0.05);
+
+  --card-hover-border-color: rgba(255, 255, 255, 0.2);
+  --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+  --card-hover-box-shadow-1-y: 5px;
+  --card-hover-box-shadow-1-blur: 10px;
+  --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+  --card-hover-box-shadow-2-y: 15px;
+  --card-hover-box-shadow-2-blur: 25px;
+  --card-hover-icon-color: #34D399;
+  --card-hover-icon-background-color: rgba(52, 211, 153, 0.1);
+  --card-hover-icon-border-color: rgba(52, 211, 153, 0.2);
+
+  --blur-opacity: .01;
+}
+
+.card {
+  background-color: var(--background-color);
+  box-shadow: 0px var(--card-box-shadow-1-y) var(--card-box-shadow-1-blur) var(--card-box-shadow-1), 0px var(--card-box-shadow-2-y) var(--card-box-shadow-2-blur) var(--card-box-shadow-2), 0 0 0 1px var(--card-border-color);
+  padding: 56px 16px 16px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden; /* Ensure shine stays inside the card */
+  transition: box-shadow .25s, transform .25s;
+}
+
+.shine {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0; /* Full width and height of the card */
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.shine::before {
+  content: '';
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotate shine for better effect */
+  background-image: var(--card-shine-gradient);
+  filter: blur(35px);
+  opacity: var(--card-shine-opacity);
+}
+
+.card:hover .shine {
+  opacity: 1; /* Show shine effect on hover */
+  transition-duration: .5s;
+}
+
+
+/* Image Box Styling */
+.imgBx {
+  transform: translateX(0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.card:hover .imgBx {
+  width: 230px; /* Slightly enlarge the image on hover */
+  height: 230px;
+  transform: translateY(-20%);
+}
+
+/* Image inside box */
+.imgBx img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .imgBx img {
+  transform: scale(1.0); /* Zoom-in effect on image hover */
+}
+
+/* Content Area */
+.content {
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.details {
+  position: relative;
+}
+
+.details h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.3rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow */
+}
+
+.details h2 span {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.7;
+  color: #777;
+}
+
+/* Action Buttons */
+.actionBtn {
+  margin-top: 15px;
+}
+
+.actionBtn button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 500;
+  background: linear-gradient(90deg, #ff5f95, #ff6fa4); /* Gradient button */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.card .actionBtn button:hover {
+  background: linear-gradient(90deg, #ff6fa4, #ff5f95); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slight button zoom on hover */
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff5f95; /* Change icon color on hover */
+}
+
+/* Fade-in Animation for Card */
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { endPoint } from "../../../Components/ForAll/ForAll";
+import { Link } from "react-router-dom";
 
 const Founder = () => {
   const [founder, setFounder] = useState();
@@ -143,11 +144,11 @@ const Founder = () => {
             </div>
           </div>
 
-          <a href="/team" target="_blank"><div className="flex justify-center items-center gap-3">
+          <Link to="/team"><div className="flex justify-center items-center gap-3">
             <h4 className="text-white poppins-thin md:text-4xl text-2xl">Meet Our Team</h4> <img 
           src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1732024726/nexile%20digital/assets/ejj6ajpv5ykj5qdgeqmi.png" 
           alt="" 
-          className="lg:w-[125px] w-[80px] ml-19"/></div></a>
+          className="lg:w-[125px] w-[80px] ml-19"/></div></Link>
         </div>
       )}
     </div>
