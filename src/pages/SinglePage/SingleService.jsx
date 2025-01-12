@@ -103,11 +103,11 @@ const SingleService = () =>{
   >
     Our Approach
   </h2>
-  <div className="">
+  <div className="mt-5">
     {service?.approach.map((item, index) => (
       <div
         key={item._id}
-        className={`flex flex-col lg:flex-row items-center my-8 group ${
+        className={`flex flex-col lg:flex-row items-center gap-8 my-8 group ${
           index % 2 !== 0 ? "lg:flex-row-reverse" : ""
         }`}
       >
@@ -118,7 +118,7 @@ const SingleService = () =>{
           className="rounded-md w-full lg:w-1/2 lg:h-1/2 h-1/2 object-cover mb-4 lg:mb-0"
         />
         {/* Text Content */}
-        <div className="lg:w-1/2 w-full lg:pl-8">
+        <div className="lg:w-1/2 w-full ">
         <h3 className="text-[#A8A8A8] lg:text-[46px] text-[20px] md:text-[30px] poppins-semibold md:col-span-4 group-hover:text-white relative md:mb-0 ">
                       {item.title}
                       {/* Square Dot */}
@@ -133,8 +133,18 @@ const SingleService = () =>{
 
 
   {/* Process Section */}
-<div className="md:mt-32 px-8">
-  <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
+<div className="md:mt-32 bg-opacity-30 px-8 py-24 relative" 
+style={{ backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1736710872/nexile%20digital/asset/fcrvpqo4dbq9hjguy9pd.webp)', 
+backgroundSize: 'cover', backgroundPosition: 'center', 
+backgroundRepeat:'no-repeat',
+backfaceVisibility:'unset'}}>{/* Black shadow at the bottom */}
+<div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black to-transparent z-0"></div>
+<div className="absolute top-0 left-0 right-0 h-40 rotate-180 bg-gradient-to-t from-black to-transparent z-0"></div>
+ {/* Full Black Layer with Opacity */}
+ <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-80 z-10"></div>
+
+ <div className="z-20 relative">
+ <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
     Our Process
   </h2>
   <div className="timeline max-w-7xl my-24 mx-auto relative">
@@ -145,7 +155,7 @@ const SingleService = () =>{
     {service?.process.map((item, index) => (
       <div
         key={item._id}
-        className={`timeline-item gap-2 !bg-black md:w-[54%] flex ${index % 2 === 0 ? 'flex-row-reverse mr-auto' : 'ml-auto'} items-start mb-12 z-20`}
+        className={`timeline-item gap-2 md:w-[54%] flex ${index % 2 === 0 ? 'flex-row-reverse mr-auto' : 'ml-auto'} items-start mb-12 z-20`}
       >
         {/* Timeline Date with Blinking Shadow */}
         <div className="timeline-date relative flex justify-center items-center mb-4 w-24 h-24 rounded-full bg-gradient-to-r from-[#00ECFB] via-indigo-500 to-pink-500 animate-glowing-shadow">
@@ -160,6 +170,7 @@ const SingleService = () =>{
       </div>
     ))}
   </div>
+ </div>
 </div>
 
 
@@ -167,10 +178,23 @@ const SingleService = () =>{
 
 
         {/* Why Choose Us Section */}
-        <div className="mt-32 px-8">
+        <div className="mt-32 px-8 relative">
         <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
         Why Choose Us
                   </h2>
+                  {/* Background images */}
+              <div className="relative !mx-[-40px]">
+                <img
+                  src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1734902203/nexile%20digital/asset/x6mschkkfnxwl6njcsnj.webp"
+                  alt=""
+                  className="absolute right-0 top-[-310px] z-[-1]"
+                />
+                <img
+                  src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1734789723/nexile%20digital/asset/zj7pdreutg396pv9cqdy.webp"
+                  alt=""
+                  className="absolute left-0 top-[700px] z-[-1]"
+                />
+              </div>
           <div className="">
             {service?.why.map((item, index) => (
               <div key={item._id} className="rounded-md p-4 group">

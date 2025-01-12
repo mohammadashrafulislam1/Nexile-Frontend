@@ -1,4 +1,5 @@
 import { BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export const ServiceCard = (service) =>{
     const serv = service?.service;
@@ -29,12 +30,13 @@ export const ServiceCard = (service) =>{
         </div>
 
         {/* Right Arrow */}
-        <div
-          className="text-white border border-2px lg:text-[40px] mt-1 md:mt-0 md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-3 md:px-3 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center md:col-span-1 
-          group-hover:bg-white group-hover:text-black transition duration-300  md:block hidden "
-        >
-          <BsArrowRight />
-        </div>
+        <Link to={`/service/${serv?.title.replace(/\s+/g, "-")}`}>
+                    <div
+                      className="text-white border border-2px lg:text-[40px] mt-1 md:mt-0 md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-3 md:px-3 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center md:col-span-1 
+                      group-hover:bg-white group-hover:text-black transition duration-300  md:block hidden "
+                    >
+                      <BsArrowRight />
+                    </div></Link>
         <div className="flex items-center justify-between md:hidden block">
         <div className="relative md:col-span-3 mt-[-140px] md:mt-4 overflow-visible">
           <img
@@ -46,12 +48,13 @@ export const ServiceCard = (service) =>{
         </div>
 
         {/* Right Arrow */}
-        <div
-          className="text-white border border-2px lg:text-[40px] mt-[-80px] md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-2 md:px-2 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center 
-          group-hover:bg-white group-hover:text-black transition duration-300 group-hover:mt-[-100px]"
-        >
-          <BsArrowRight />
-        </div>
+        <Link to={`/service/${serv?.title.replace(/\s+/g, "-")}`}>
+                    <div
+                      className="text-white border border-2px lg:text-[40px] mt-[-80px] md:text-[30px] text-[25px] font-[400] py-3 px-2 md:py-2 md:px-2 rounded-full md:w-16 md:h-16 w-8 h-8 flex justify-center items-center 
+                      group-hover:bg-white group-hover:text-black transition duration-300 group-hover:mt-[-100px]"
+                    >
+                      <BsArrowRight />
+                    </div></Link>
         </div>
       </div>
       

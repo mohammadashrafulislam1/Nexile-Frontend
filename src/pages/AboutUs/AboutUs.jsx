@@ -74,7 +74,7 @@ const AboutUs = () =>{
          <p className="text-[15px] md:text-[18px] md:px-24 p-3 rounded-lg text-white">{about?.sectionDes}</p>
         </div>
         <Link to={"/contact_us"} className="flex justify-center my-4">
-        <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
+        <button className="bg-white mb-4 lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
             Let’s Get Solution!</button></Link>
             
 
@@ -91,7 +91,7 @@ const AboutUs = () =>{
     
 
     <div
-  className="md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-480px] md:mt-[-680px] mt-[-500px] z-24 relative">
+  className="md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-430px] md:mt-[-600px] mt-[-500px] z-24 relative">
      <div
   className=" w-full mx-auto my-auto md:p-[40px] flex flex-col justify-center lg:pt-0 md:p-9 p-3"
   >

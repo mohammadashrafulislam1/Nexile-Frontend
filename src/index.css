@@ -314,13 +314,13 @@
 
 @keyframes glowing-shadow {
   0% {
-    box-shadow: 0 0 10px 2px rgba(0, 236, 251, 0.8), 0 0 20px 10px rgba(0, 236, 251, 0.6);
+    box-shadow: 0 0 5px 1px rgba(0, 236, 251, 0.8), 0 0 10px 5px rgba(0, 236, 251, 0.6);
   }
   50% {
-    box-shadow: 0 0 10px 2px rgba(75, 29, 230, 0.8), 0 0 20px 10px rgba(75, 29, 230, 0.6);
+    box-shadow: 0 0 5px 1px rgba(75, 29, 230, 0.8), 0 0 10px 5px rgba(75, 29, 230, 0.6);
   }
   100% {
-    box-shadow: 0 0 10px 2px rgba(0, 236, 251, 0.8), 0 0 20px 10px rgba(0, 236, 251, 0.6);
+    box-shadow: 0 0 5px 1px rgba(0, 236, 251, 0.8), 0 0 10px 5px rgba(0, 236, 251, 0.6);
   }
 }
 
