@@ -12,7 +12,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 const SkeletonLoader = () => {
     return (
-      <div className="h-[1040px]">
+      <div className="h-[1040px] w-[1400px]">
         <div className="animate-pulse">
           {/* Skeleton Title */}
           <div className="h-[60px] lg:h-[130px] bg-gray-300 rounded-md w-[60%] mx-auto mb-4"></div>

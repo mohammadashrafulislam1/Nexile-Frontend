@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
-    <div>
+    <div className="w-screen">
       {/* Helmet */}
       <Helmet>
         <title>404 Error - Nexile Digital</title>
