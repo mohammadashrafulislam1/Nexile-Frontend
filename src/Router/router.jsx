@@ -11,6 +11,7 @@ import SingleProject from "../pages/SinglePage/SingleProject";
 import { endPoint } from "../Components/ForAll/ForAll";
 import SingleBlog from "../pages/SinglePage/SingleBlog";
 import Team from "../pages/Team/Team";
+import SingleService from "../pages/SinglePage/SingleService";
 
 export const router = createBrowserRouter([
     {
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
     {
         path:'/blog/:title',
         element:<SingleBlog/>,
+        errorElement:<Error />,
+    },
+    {
+        path:'/service/:title',
+        element:<SingleService/>,
         errorElement:<Error />,
     },
     {
