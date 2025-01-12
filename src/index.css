@@ -143,6 +143,7 @@
   }
 }
 
+
 }
 @media screen and (max-width: 560px) {
   .surface-duo2 {
@@ -308,6 +309,25 @@
   outline: none;
   position: relative;
 }
+
+
+
+@keyframes glowing-shadow {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(0, 236, 251, 0.8), 0 0 20px 10px rgba(0, 236, 251, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(75, 29, 230, 0.8), 0 0 20px 10px rgba(75, 29, 230, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(0, 236, 251, 0.8), 0 0 20px 10px rgba(0, 236, 251, 0.6);
+  }
+}
+
+.animate-glowing-shadow {
+  animation: glowing-shadow 2s infinite ease-in-out;
+}
+
 
 
 @tailwind base;

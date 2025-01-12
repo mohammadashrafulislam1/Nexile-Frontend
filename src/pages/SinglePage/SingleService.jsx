@@ -80,10 +80,11 @@ const SingleService = () =>{
               <Header className="relative z-10" />
   
               {/* Content or Skeleton Loader */}
-              <div className="h-[1040px] ">
-                  <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
+              <div className="h-[1040px] text-center">
+                  <h2 className="lg:text-[120px] mt-24 text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
                     {realUrl}
                   </h2>
+                  <p className="poppins-light text-white text-[20px]">{service?.subtitle}</p>
                  <img src={service?.mainServiceImage} alt={realUrl} className="lg:w-[910px] w-[97%] md:h-[560px] h-[400px] mx-auto rounded-[10px] mt-7 object-cover"/>
               
                 </div>
@@ -114,11 +115,11 @@ const SingleService = () =>{
         <img
           src={item.image}
           alt={item.title}
-          className="rounded-md w-full lg:w-1/2 lg:h-1/2 h-full object-cover mb-4 lg:mb-0"
+          className="rounded-md w-full lg:w-1/2 lg:h-1/2 h-1/2 object-cover mb-4 lg:mb-0"
         />
         {/* Text Content */}
-        <div className="lg:w-1/2 lg:pl-8">
-        <h3 className="text-[#A8A8A8] lg:text-[46px] text-[20px] md:text-[30px] poppins-semibold md:col-span-4 group-hover:text-white relative md:mb-0 mb-[-70px]">
+        <div className="lg:w-1/2 w-full lg:pl-8">
+        <h3 className="text-[#A8A8A8] lg:text-[46px] text-[20px] md:text-[30px] poppins-semibold md:col-span-4 group-hover:text-white relative md:mb-0 ">
                       {item.title}
                       {/* Square Dot */}
                       <span className="hidden group-hover:inline-block bg-[#00ECFB] w-2 h-2 ml-2 rounded-sm absolute bottom-2"></span>
@@ -131,25 +132,39 @@ const SingleService = () =>{
 </div>
 
 
-        {/* Process Section */}
-        <div className="mt-16 px-8">
-        <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
-        Our Process
-                  </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {service?.process.map((item) => (
-              <div key={item._id} className="bg-gray-800 rounded-md p-4">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="rounded-md mb-4 w-full h-40 object-cover"
-                />
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="text-gray-400 mt-2 group-hover:text-gray-300 poppins-light">{item.description}</p>
-              </div>
-            ))}
-          </div>
+  {/* Process Section */}
+<div className="mt-16 px-8">
+  <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
+    Our Process
+  </h2>
+  <div className="timeline max-w-7xl my-24 mx-auto relative">
+    {/* Vertical Line */}
+    <div className="absolute left-1/2 w-[1px] h-full bg-gray-600 transform -translate-x-1/2 z-0"></div>
+
+    {/* Timeline Items */}
+    {service?.process.map((item, index) => (
+      <div
+        key={item._id}
+        className={`timeline-item gap-2 !bg-black md:w-[54%] flex ${index % 2 === 0 ? 'flex-row-reverse mr-auto' : 'ml-auto'} items-start mb-12 z-20`}
+      >
+        {/* Timeline Date with Blinking Shadow */}
+        <div className="timeline-date relative flex justify-center items-center mb-4 w-24 h-24 rounded-full bg-gradient-to-r from-[#00ECFB] via-indigo-500 to-pink-500 animate-glowing-shadow">
+          <img src={item.image} alt={item.title} className="absolute w-20 h-20 object-cover rounded-full" />
         </div>
+
+        {/* Timeline Content with Glassmorphism */}
+        <div className="timeline-content flex-1 p-6 bg-white bg-opacity-20 backdrop-blur-lg shadow-lg rounded-lg relative">
+          <h3 className="text-xl font-semibold text-[#00ECFB]">{item.title}</h3>
+          <p className="mt-4 text-gray-200">{item.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+
 
         {/* Why Choose Us Section */}
         <div className="mt-16 px-8">
@@ -167,7 +182,7 @@ const SingleService = () =>{
                 <li className="flex gap-2 items-center "><div className="text-white border-[1px] 
                 w-12 h-12 flex gap-2 items-center justify-center border-[#fff] px-2 rounded-full">{index+1}</div>
                 {/* Service Title */}
-                <h3 className="text-[#A8A8A8] lg:text-[46px] text-[20px] md:text-[30px] poppins-semibold md:col-span-4 group-hover:text-white relative md:mb-0 mb-[-70px]">
+                <h3 className="text-[#A8A8A8] lg:text-[46px] text-[20px] md:text-[30px] poppins-semibold md:col-span-4 group-hover:text-white relative md:mb-0">
                 {item.title}
                       {/* Square Dot */}
                       <span className="hidden group-hover:inline-block bg-[#00ECFB] w-2 h-2 ml-2 rounded-sm absolute bottom-2"></span>
