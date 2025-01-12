@@ -94,9 +94,9 @@ const SingleService = () =>{
             </div>
             
             {/* main content goes here */}
-             <div className="lg:mt-[-350px]  mt-[-300px] relative mb-24 !z-24">
+             <div className="lg:mt-[-350px] md:mt-[-380px] mt-[-480px] relative mb-24 !z-24">
                 {/* Approach Section */}
-                <div className="mt-16 px-8">
+                <div className="mt-32 px-8">
   <h2
     className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40"
     style={{ letterSpacing: "-3px" }}
@@ -133,7 +133,7 @@ const SingleService = () =>{
 
 
   {/* Process Section */}
-<div className="mt-16 px-8">
+<div className="md:mt-32 px-8">
   <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
     Our Process
   </h2>
@@ -167,7 +167,7 @@ const SingleService = () =>{
 
 
         {/* Why Choose Us Section */}
-        <div className="mt-16 px-8">
+        <div className="mt-32 px-8">
         <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
         Why Choose Us
                   </h2>
@@ -194,7 +194,7 @@ const SingleService = () =>{
         </div>
 
         {/* Matched Tech Stack Section */}
-        <div className="p-6">
+        <div className="mt-32 p-6">
         <h2 className="lg:text-[60px] text-[40px] font-bold lg:leading-[70px] leading-[40px] my-4 text-white text-center uppercase z-40" style={{ letterSpacing: '-3px' }}>
         Tools
                   </h2>
