@@ -170,15 +170,20 @@ const ContactUs = () =>{
     <div
   className="md:h-[1837px] surface-duo-con md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-580px] md:mt-[-800px] mt-[-600px] z-24 relative">
      <div
-  className="md:w-[910px] surface-duo2 bg-contain w-[304px] surface-duo w-full md:h-[1837px] mx-auto my-auto md:p-[40px] flex flex-col justify-center lg:pt-0 md:p-9 p-3"
+  className="md:w-[910px] surface-duo2 bg-contain w-[304px] surface-duo w-full md:h-[1837px] mx-auto my-auto md:p-[40px] flex flex-col justify-center lg:pt-0 md:p-9 p-2"
   style={{
-    backgroundImage: "url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1735433829/nexile%20digital/asset/ja6swmxfb0v8aqde4rrg.webp)",
-    borderRadius: "16px", 
-      backgroundPosition: "center", // Centers the background image
-      backgroundRepeat:"no-repeat"
+    backgroundImage:
+      window.innerWidth < 768
+        ? "linear-gradient(to right, #9DE8EE, #FA7C0B, #9F8CED)"
+        : "url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1735433829/nexile%20digital/asset/ja6swmxfb0v8aqde4rrg.webp)",
+    borderRadius: "16px",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
   }}
 >
-         <h2 style={{
+  <div className="bg-[#000] rounded-[16px] p-3">
+    
+  <h2 style={{
                 background: "linear-gradient(30deg, #FA7C0B, #9F8CED, #9DE8EE)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
@@ -277,6 +282,7 @@ const ContactUs = () =>{
     </div>
   </div>
 
+  </div>
 </div>  
      </div>
 

@@ -131,14 +131,14 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .surface-duo2 {
-    padding: 15px; /* Adjust padding for smaller screens */
+    padding: 2px; /* Adjust padding for smaller screens */
     background-size: contain; /* Ensures the image is fully visible */
   }
 }
 
 @media (max-width: 480px) {
   .surface-duo2 {
-    padding: 10px; /* Further reduce padding for very small screens */
+    padding: 2px; /* Further reduce padding for very small screens */
     border-radius: 5px; /* Optional: Adjust radius for smaller screens */
   }
 }
@@ -150,7 +150,7 @@
     height: auto !important; /* Adjust height dynamically */
     background-size: cover !important; /* Ensure the image covers the area */
     background-position: center !important; /* Center the image */
-    padding: 20px 10px !important; /* Responsive padding */
+    padding: 2px !important; /* Responsive padding */
     z-index: 20;
   }
 
