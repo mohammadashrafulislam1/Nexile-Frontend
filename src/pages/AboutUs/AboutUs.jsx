@@ -24,7 +24,7 @@ const AboutUs = () =>{
       }, []);
     console.log(about)
     return(
-        <div>
+        <div className="md:w-sreen">
         {/* Helmet */}
         <Helmet>
         <title>Nexile Digital - About Us</title>

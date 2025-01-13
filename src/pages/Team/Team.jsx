@@ -93,7 +93,7 @@ const Team =()=>{
     
 
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 px-10 mb-24 
-    lg:mt-[-600px] relative mt-[-750px]">
+    lg:mt-[-530px] relative mt-[-650px]">
   {team.map((member) => (
     <div className="card relative overflow-hidden group rounded-lg p-[2px] bg-gradient-to-r from-[#9DE8EE] via-[#FA7C0B] to-[#9F8CED] shadow-lg hover:shadow-xl transition duration-300">
       <div className="shine"></div>

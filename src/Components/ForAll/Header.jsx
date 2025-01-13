@@ -28,7 +28,7 @@ const Header = () => {
     
 
     // Skeleton loader component
-    const SkeletonLoader = () => (
+    const SkeletonLoader = () => ( 
             <div className="animate-pulse flex gap-5 navbar justify-between">
                 <div className="h-12 bg-gray-300 w-[300px] rounded"></div>
                 <div className="flex gap-2 w-[40%] items-center justify-end lg:justify-center">

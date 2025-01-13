@@ -81,7 +81,7 @@ const About = ()=>{
         };
         fetchAbout();
         // Set a timeout for loader to hide after 2 seconds if data fetch is complete
-        const timer = setTimeout(() => setLoading(false), 2000);
+        const timer = setTimeout(() => setLoading(false), 300);
     
         return () => clearTimeout(timer); // Clear the timer on component unmount
       }, []);
