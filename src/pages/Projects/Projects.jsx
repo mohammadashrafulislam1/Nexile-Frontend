@@ -63,10 +63,10 @@ const Projects = () =>{
         backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        position: 'relative', // Ensure background is a layer
+        position: '', // Ensure background is a layer
         zIndex: 0, // Send background layer to the back
       }}
-      className="relative"
+      className=""
     >
       {/* Background images */}
       <div className="relative">
@@ -107,7 +107,7 @@ const Projects = () =>{
       ></div>
     </div>
 
-    <div className=" text-white py-8 lg:mt-[-560px] mt-[-760px] md:mt-[-840px] mb-14 z-24 relative">
+    <div className=" text-white py-8 lg:mt-[-560px] mt-[-760px] md:mt-[-840px] mb-14 z-24">
         <h1 className="text-center lg:text-4xl text-3xl font-bold">Our Projects</h1>
         <div className="text-center mt-4">
           <select

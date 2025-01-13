@@ -101,10 +101,10 @@ const ContactUs = () =>{
         backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        position: 'relative', // Ensure background is a layer
+        position: '', // Ensure background is a layer
         zIndex: 0, // Send background layer to the back
       }}
-      className="relative"
+      className=""
     >
       {/* Background images */}
       <div className="relative">
@@ -168,7 +168,7 @@ const ContactUs = () =>{
      
 
     <div
-  className="md:h-[1837px] surface-duo-con md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-580px] md:mt-[-800px] mt-[-600px] z-24 relative">
+  className="md:h-[1837px] surface-duo-con md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-580px] md:mt-[-800px] mt-[-600px] z-24">
      <div
   className="md:w-[910px] surface-duo2 bg-contain w-[304px] surface-duo w-full md:h-[1837px] mx-auto my-auto md:p-[40px] flex flex-col justify-center lg:pt-0 md:p-9 p-2"
   style={{

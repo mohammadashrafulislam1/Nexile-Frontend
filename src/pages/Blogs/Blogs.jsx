@@ -82,10 +82,10 @@ const Blogs = () => {
               backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-              position: 'relative',
+              position: '',
               zIndex: 0,
             }}
-            className="relative"
+            className=""
           >
             {/* Background images */}
             <div className="relative">
@@ -123,7 +123,7 @@ const Blogs = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="md:p-12 !z-[10] lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px] relative">
+          <div className="md:p-12 !z-[10] lg:p-[30px] p-2 gap-3 mx-auto my-auto mb-24 lg:mt-[-300px] md:mt-[-560px] mt-[-500px]">
             <div className="animated-border-input animated-border-btn flex justify-center mx-auto md:w-[70%] my-12">
               <input
                 type="text"
