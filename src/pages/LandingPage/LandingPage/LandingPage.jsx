@@ -50,7 +50,7 @@ const LandingPage = ()=>{
   </div>
 
   {/* Content */}
-  <Header className="relative z-10" />
+  <Header className="relative lg:z-10 !z-[100]" />
 <Hero className="relative z-20" />
 
 

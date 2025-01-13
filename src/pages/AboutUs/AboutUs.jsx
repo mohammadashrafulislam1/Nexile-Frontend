@@ -34,39 +34,39 @@ const AboutUs = () =>{
         {/* Content */}
        <div className="bg-black overflow-hidden">
        <div 
-      className="relative z-0 bg-black" 
+      className=" z-0 bg-black" 
       >
       <div 
       style={{
         backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        position: 'relative', // Ensure background is a layer
+        position: '', // Ensure background is a layer
         zIndex: 0, // Send background layer to the back
       }}
-      className="relative"
+      className=""
     >
       {/* Background images */}
       <div className="relative">
         <img
           src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/ebqjrqhwdf0puwpmup9g.webp"
           alt=""
-          className="absolute right-0 z-[-1]"
+          className="absolute right-0 z-[0]"
         />
         <img
           src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040744/nexile%20digital/asset/krjhtmdwyfeoebirihzq.webp"
           alt=""
-          className="absolute left-0 z-[-1]"
+          className="absolute left-0 z-[0]"
         />
       </div>
     
       {/* Content */}
-      <Header className="relative z-10" />
+      <Header className="relative !z-[999]" />
 
      
 
      <div className=" h-[1040px]">
-     <h2 className="lg:text-[130px] text-[50px] md:px-4 px-1 mb-2 font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40" 
+     <h2 className="lg:text-[130px] text-[50px] md:px-4 px-1 mb-2 font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40 relative" 
              style={{letterSpacing:'-5px'}}>{about?.sectionTitle}</h2>
       <p className="lg:text-[30px] text-[18px] md:px-4 px-2 text-white font-[100] text-center">{about?.intro?.tagline}</p>
        {/* Section Description */}
@@ -91,7 +91,7 @@ const AboutUs = () =>{
     
 
     <div
-  className="md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-430px] md:mt-[-600px] mt-[-500px] z-24 relative">
+  className="md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-430px] md:mt-[-600px] mt-[-500px] z-24 ">
      <div
   className=" w-full mx-auto my-auto md:p-[40px] flex flex-col justify-center lg:pt-0 md:p-9 p-3"
   >

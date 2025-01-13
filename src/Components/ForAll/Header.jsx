@@ -43,7 +43,7 @@ const Header = () => {
     );
 
     return (
-        <div className="navbar relative">
+        <div className="navbar relative z-[100]">
             {loading ? (
                 <SkeletonLoader />
             ) : (
@@ -73,9 +73,10 @@ const Header = () => {
                     </div>
 
                     {/* Dropdown overlay */}
-                    {isDropdownOpen && (
+                  {/* Dropdown overlay */}
+{isDropdownOpen && (
     <div
-        className="fixed inset-0 z-[9999] lg:hidden bg-black bg-opacity-100 flex flex-col p-4 text-white"
+        className="fixed inset-0 z-[9999] w-[80%] bg-black bg-opacity-100 flex flex-col p-4 text-white"
     >
         <button
             onClick={() => setIsDropdownOpen(false)}
@@ -86,9 +87,9 @@ const Header = () => {
         <img
             src={header[0]?.logo || ''}
             alt={`${header[0]?.title || ''} ${header[0]?.description || ''}`}
-            className="w-[250px] h-[50px] mb-10"
+            className="w-[250px] h-[50px] mb-10 mx-auto"
         />
-        <div className="text-center no-underline space-y-6 text-[18px] font-light poppins-regular">
+        <div className="text-center space-y-6 text-[18px] font-light poppins-regular">
             {header[0]?.menu &&
                 header[0].menu.map((item) => (
                     <Link to={item?.link} key={item._id}>
@@ -103,6 +104,7 @@ const Header = () => {
         </div>
     </div>
 )}
+
 
                 </div>
             )}
