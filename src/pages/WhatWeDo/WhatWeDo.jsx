@@ -59,22 +59,22 @@ const WhatWeDo = () =>{
                 backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                position: 'relative',
+                position: '',
                 zIndex: 0,
               }}
-              className="relative"
+              className=""
             >
               {/* Background images */}
               <div className="relative">
                 <img
                   src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/ebqjrqhwdf0puwpmup9g.webp"
                   alt=""
-                  className="absolute right-0 z-[-1]"
+                  className="absolute right-0 z-[0]"
                 />
                 <img
                   src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040744/nexile%20digital/asset/krjhtmdwyfeoebirihzq.webp"
                   alt=""
-                  className="absolute left-0 z-[-1]"
+                  className="absolute left-0 z-[0]"
                 />
               </div>
   
@@ -82,14 +82,14 @@ const WhatWeDo = () =>{
               <Header className="relative z-10" />
   
               <div className="h-[700px]">
-                <h2 className="lg:text-[130px] text-[60px] font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40"
+                <h2 className="lg:text-[130px] text-[60px] font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40 relative"
                     style={{ letterSpacing: '-5px' }}>
                   Services from Nexile Digital
                 </h2>
-                <p className="lg:text-[30px] text-[20px] text-white font-[100] text-center">
+                <p className="lg:text-[30px] text-[20px] text-white font-[100] text-center z-40 relative">
                   What Nexile Digital Do?
                 </p>
-                <Link to={"/contact_us"} className="flex justify-center my-4">
+                <Link to={"/contact_us"} className="flex justify-center my-4 z-40 relative">
           <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
               Contact Us!</button></Link>
              
@@ -99,7 +99,7 @@ const WhatWeDo = () =>{
               <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"></div>
             </div>
   
-            <div className="mb-8 relative lg:mt-[-200px] md:mt-[-450px] mt-[-400px]
+            <div className="mb-8 lg lg:mt-[-200px] md:mt-[-450px] mt-[-400px]
             rounded-lg p-[2px] bg-gradient-to-r from-[#9DE8EE] via-[#FA7C0B] 
         to-[#9F8CED] shadow-lg hover:shadow-xl transition duration-300 lg:mx-12 mx-3 my-4 !z-[40]">
                 <div className="bg-[#131313] rounded-lg px-4 lg:py-[80px] lg:px-[80px] md:py-12 py-6">
