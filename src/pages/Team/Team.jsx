@@ -46,10 +46,10 @@ const Team =()=>{
         backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        position: 'relative', // Ensure background is a layer
+        position: '', // Ensure background is a layer
         zIndex: 0, // Send background layer to the back
       }}
-      className="relative"
+      className=""
     >
       {/* Background images */}
       <div className="relative">

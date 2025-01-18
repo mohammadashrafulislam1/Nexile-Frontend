@@ -76,7 +76,7 @@ const Header = () => {
                   {/* Dropdown overlay */}
 {isDropdownOpen && (
     <div
-        className="fixed inset-0 z-[9999] w-[80%] bg-black bg-opacity-100 flex flex-col p-4 text-white"
+        className="fixed lg:hidden inset-0 z-[9999] w-[80%] md:w-[60%] bg-black bg-opacity-100 flex flex-col p-4 text-white"
     >
         <button
             onClick={() => setIsDropdownOpen(false)}
