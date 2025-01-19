@@ -50,8 +50,8 @@ const LandingPage = ()=>{
   </div>
 
   {/* Content */}
-  <Header className="relative lg:z-10 !z-[1000]" />
-<Hero className="relative z-20" />
+  <Header className="relative !z-[3200]"/>
+<Hero/>
 
 
   {/* Black shadow at the bottom */}
@@ -61,14 +61,14 @@ const LandingPage = ()=>{
 </div>
 
    </div>
-  <Service className=""/>
+  <Service />
   <About/>
-  <HowWeWork className="!z-60"/>
-  <Founder className="!z-60"/>
-  <Works className="!z-60"/>
-  <Testimonials className="!z-60"/>
-  <FAQs className="!z-60"/>
-  <ContactBtn className="!z-60"/>
+  <HowWeWork/>
+  <Founder />
+  <Works/>
+  <Testimonials/>
+  <FAQs/>
+  <ContactBtn/>
   <div className="relative">
   <img 
   src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1734839480/nexile%20digital/asset/x5pgdn8cdhi0sqxkpcgx.webp" 

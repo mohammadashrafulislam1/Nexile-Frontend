@@ -71,39 +71,45 @@ const Header = () => {
                             </svg>
                         </button>
                     </div>
-
-                    {/* Dropdown overlay */}
                   {/* Dropdown overlay */}
-{isDropdownOpen && (
-    <div
-        className="fixed lg:hidden inset-0 z-[9999] w-[80%] md:w-[60%] bg-black bg-opacity-100 flex flex-col p-4 text-white"
+                  {isDropdownOpen && (
+  <div
+    className="fixed lg:hidden inset-0 z-[9999] w-full h-full bg-black bg-opacity-100 flex flex-col p-4 text-white overflow-y-auto"
+  >
+   <div className="bg-black w-full h-full relative !z-[3200]">
+     {/* Close Button */}
+     <button
+      onClick={() => setIsDropdownOpen(false)}
+      className="text-2xl ml-auto mb-4"
     >
-        <button
-            onClick={() => setIsDropdownOpen(false)}
-            className="text-2xl ml-auto mb-4"
-        >
-            ✖
-        </button>
-        <img
-            src={header[0]?.logo || ''}
-            alt={`${header[0]?.title || ''} ${header[0]?.description || ''}`}
-            className="w-[250px] h-[50px] mb-10 mx-auto"
-        />
-        <div className="text-center space-y-6 text-[18px] font-light poppins-regular">
-            {header[0]?.menu &&
-                header[0].menu.map((item) => (
-                    <Link to={item?.link} key={item._id}>
-                        <p
-                            className="mb-2 no-underline bg-white bg-opacity-60 
-                            text-black px-24 py-2 rounded-md"
-                        >
-                            {item?.name}
-                        </p>
-                    </Link>
-                ))}
-        </div>
+      ✖
+    </button>
+
+    {/* Logo */}
+    <img
+      src={header[0]?.logo || ""}
+      alt={`${header[0]?.title || ""} ${header[0]?.description || ""}`}
+      className="w-[250px] h-[50px] mb-10 mx-auto"
+    />
+
+    {/* Menu Items */}
+    <div className="text-center space-y-6 text-[18px] font-light poppins-regular">
+      {header[0]?.menu &&
+        header[0].menu.map((item) => (
+          <Link to={item?.link} key={item._id}>
+            <p
+              className="mb-2 no-underline bg-white bg-opacity-60 
+                         text-black px-24 py-2 rounded-md"
+            >
+              {item?.name}
+            </p>
+          </Link>
+        ))}
     </div>
+   </div>
+  </div>
 )}
+
 
 
                 </div>

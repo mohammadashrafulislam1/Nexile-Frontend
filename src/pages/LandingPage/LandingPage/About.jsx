@@ -141,11 +141,11 @@ bg-white text-black transition duration-300 z-10 md:block hidden absolute lg:top
 >
 <BsArrowLeft />
 </div></Link>
-<div className="lg:w-[300px] w-full lg:h-[300px] h-full relative !z-[0] lg:hidden lg:group-hover:block transition duration-300 transform">
+<div className="lg:w-[300px] w-full lg:h-[300px] h-full relative !z-[0] hidden group-hover:block transition duration-300 transform">
 <img
 src={about?.ourStory?.image?.url}
 alt={about?.ourStory?.description}
-className="lg:w-[300px] w-full lg:h-[300px] h-full relative !z-0 object-cover object-center"
+className="lg:w-[300px] w-full lg:h-[300px] h-full object-cover object-center"
 />
 </div>
 </div>
