@@ -99,7 +99,7 @@ const Header = () => {
           <Link to={item?.link} key={item._id}>
             <p
               className="mb-2 no-underline bg-white bg-opacity-60 
-                         text-black px-24 py-2 rounded-md"
+                         text-black px-24 py-2 rounded-md md:w-[60%] mx-auto w-full"
             >
               {item?.name}
             </p>
