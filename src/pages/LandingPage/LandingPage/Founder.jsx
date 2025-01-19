@@ -47,7 +47,7 @@ const Founder = () => {
       {loading ? (
         <SkeletonLoader />
       ) : (
-        <div className="my-10 px-8 lg:pb-5 relative overflow-hidden">
+        <div className="my-10 px-8 lg:pb-5 lg:relative overflow-hidden">
           <h2 className="text-white md:mt-0 mt-7 lg:py-10  lg:text-[120px] text-[40px] uppercase font-bold underline lg:leading-[160px] leading-[40px]">
             {founder ? founder[0]?.title : ""}
           </h2>
@@ -63,7 +63,7 @@ const Founder = () => {
   />
 
   {/* Working Since Section */}
-  <div className="relative z-10">
+  <div className="lg:relative lg:z-10">
     <p className="text-white uppercase poppins-light text-[20px]">
       Working since
     </p>
@@ -73,7 +73,7 @@ const Founder = () => {
   </div>
 
   {/* Client Satisfaction Section */}
-  <div className="relative z-20 mt-20">
+  <div className="lg:relative lg:z-20 mt-20">
     <p className="text-white uppercase poppins-light text-[20px]">
       Client satisfaction
     </p>
@@ -83,7 +83,7 @@ const Founder = () => {
   </div>
 
   {/* Completed Projects Section */}
-  <div className="relative z-10 mt-20">
+  <div className="lg:relative lg:z-10 mt-20">
     <p className="text-white uppercase poppins-light text-[20px]">
       Total completed projects
     </p>

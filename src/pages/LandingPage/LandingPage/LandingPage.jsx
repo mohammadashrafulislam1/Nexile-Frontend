@@ -23,7 +23,7 @@ const LandingPage = ()=>{
     {/* Content */}
    <div className="bg-black overflow-hidden">
    <div 
-  className="relative z-0 bg-black" 
+  className="relative lg:z-0 bg-black" 
   >
   <div 
   style={{
@@ -40,12 +40,12 @@ const LandingPage = ()=>{
     <img
       src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/ebqjrqhwdf0puwpmup9g.webp"
       alt=""
-      className="absolute right-0 z-[-1]"
+      className="absolute right-0 z-0"
     />
     <img
       src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040744/nexile%20digital/asset/krjhtmdwyfeoebirihzq.webp"
       alt=""
-      className="absolute left-0 z-[-1]"
+      className="absolute left-0 z-0"
     />
   </div>
 
