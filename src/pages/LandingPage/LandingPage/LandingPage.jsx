@@ -50,19 +50,19 @@ const LandingPage = ()=>{
   </div>
 
   {/* Content */}
-  <Header className="relative lg:z-10 !z-[100]" />
+  <Header className="relative lg:z-10 !z-[1000]" />
 <Hero className="relative z-20" />
 
 
   {/* Black shadow at the bottom */}
   <div
-    className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"
+    className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent !z-[-1]"
   ></div>
 </div>
 
    </div>
   <Service className=""/>
-  <About className="!z-60"/>
+  <About/>
   <HowWeWork className="!z-60"/>
   <Founder className="!z-60"/>
   <Works className="!z-60"/>

@@ -88,29 +88,28 @@ const About = ()=>{
 
     console.log(about)
     return(
-        <div className="px-8 lg:py-5 relative overflow-hidden"
+        <div className="px-8 lg:py-5  overflow-hidden "
         style={{
             backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1733497901/nexile%20digital/asset/emrwdlzc7rb2y5hn7tou.webp)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            position: 'relative', // Ensure background is a layer
+            position: '', // Ensure background is a layer
             zIndex: 0, // Send background layer to the back
           }}>
-            <div
-    className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"
-  ></div>
       {
         loading ? (<SkeletonLoader />) : (
-        <div className="pb-20">
-
-        <div>
+        <div className="lg:relative z-0 pb-20">
+<div
+    className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent lg:z-10 !z-[-1]"
+  ></div>
+        <div className="relative z-[-1] py-[-30px] my-[-30px]">
         <img src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1733510248/nexile%20digital/asset/vduwhw1frlhz0szyueex.webp" 
         alt="NEXILE DIGITAL" 
-        className="absolute top-10 right-0"/>
+        className="absolute top-[-150px]  right-[-100px]"/>
         
         <img src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1733510488/nexile%20digital/asset/jtftmmvlctuvrdu1cgyk.webp" 
         alt="NEXILE DIGITAL" 
-        className="absolute top-10 left-0 z-[-10]" />
+        className="absolute top-10 left-[-100px] z-[-10]" />
     </div>
 
 <div className="lg:flex justify-end flex-row-reverse items-center mt-14 md:mt-0">
@@ -121,7 +120,7 @@ const About = ()=>{
       </h2>
       <div>
         <p className="font-[100] text-white text-[20px]">{about?.sectionDes}</p>
-        <Link to="/about_us" className="relative z-10">
+        <Link to="/about_us" className="">
           <img
             src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1732024726/nexile%20digital/assets/ejj6ajpv5ykj5qdgeqmi.png"
             className="lg:w-[125px] w-[80px] ml-10"
@@ -133,7 +132,7 @@ const About = ()=>{
 
     
 {/* Option 1 */}
-<div className="lg:flex items-center gap-10 relative md:px-10 p-3 group mt-10">
+<div className="lg:flex items-center gap-10 md:relative md:px-10 p-3 group mt-10">
 <div>
 <Link to="/about_us">
 <div
@@ -142,11 +141,11 @@ bg-white text-black transition duration-300 z-10 md:block hidden absolute lg:top
 >
 <BsArrowLeft />
 </div></Link>
-<div className="lg:w-[300px] w-full lg:h-[300px] h-full hidden group-hover:block transition duration-300 transform">
+<div className="lg:w-[300px] w-full lg:h-[300px] h-full relative !z-[0] lg:hidden lg:group-hover:block transition duration-300 transform">
 <img
 src={about?.ourStory?.image?.url}
 alt={about?.ourStory?.description}
-className="lg:w-[300px] w-full lg:h-[300px] h-full object-cover object-center"
+className="lg:w-[300px] w-full lg:h-[300px] h-full relative !z-0 object-cover object-center"
 />
 </div>
 </div>
@@ -158,7 +157,7 @@ className="lg:w-[300px] w-full lg:h-[300px] h-full object-cover object-center"
 </div>
 
 {/* Option 2 */}
-<div className="lg:flex items-center flex-row-reverse gap-10 relative md:px-10 p-3 group mt-10">
+<div className="lg:flex items-center flex-row-reverse gap-10 md:relative md:px-10 p-3 group mt-10">
 <div>
 <div className="lg:w-[300px] w-full lg:h-[300px] h-full  hidden group-hover:block transition duration-300 transform">
 
@@ -183,7 +182,7 @@ className="lg:w-[300px] w-full lg:h-[300px] h-full  object-cover object-center"
 </div>
 
 {/* Option 3 */}
-<div className="lg:flex items-center gap-10 relative md:px-10 p-3 group mt-10 mb-10">
+<div className="lg:flex items-center gap-10 md:relative md:px-10 p-3 group mt-10 mb-10">
 <div>
 <Link to="/about_us">
 <div
