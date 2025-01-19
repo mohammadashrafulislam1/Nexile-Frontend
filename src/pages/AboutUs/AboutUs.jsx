@@ -65,7 +65,7 @@ const AboutUs = () =>{
 
      
 
-     <div className=" h-[1040px]">
+     <div className="md:h-[1040px] h-full">
      <h2 className="lg:text-[130px] text-[50px] md:px-4 px-1 mb-2 font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40 relative" 
              style={{letterSpacing:'-5px'}}>{about?.sectionTitle}</h2>
       <p className="lg:text-[30px] text-[18px] md:px-4 px-2 text-white font-[100] text-center z-40 relative">{about?.intro?.tagline}</p>
@@ -77,21 +77,21 @@ const AboutUs = () =>{
         <button className="bg-white mb-4 lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
             Let’s Get Solution!</button></Link>
             
+      {/* Black shadow at the bottom */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-1"
+      ></div>
 
      </div>
 
 
     
     
-      {/* Black shadow at the bottom */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-10"
-      ></div>
     </div>
     
 
     <div
-  className="md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-430px] md:mt-[-550px] mt-[-500px] z-24 ">
+  className="relative md:p-3 lg:p-0 p-2  mx-auto my-auto flex items-center justify-center mb-24 lg:mt-[-430px] md:mt-[-550px] mt-0 z-24 ">
      <div
   className=" w-full mx-auto my-auto md:p-[40px] flex flex-col justify-center lg:pt-0 md:p-9 p-3"
   >
