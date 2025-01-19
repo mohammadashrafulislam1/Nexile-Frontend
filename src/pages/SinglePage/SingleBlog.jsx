@@ -73,10 +73,10 @@ const SingleBlog = () =>{
                 backgroundImage: 'url(https://res.cloudinary.com/dnwmtd4p1/image/upload/v1731040743/nexile%20digital/asset/otjfpjewv5z1bubx26kr.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                position: 'relative',
+                position: '',
                 zIndex: 0,
               }}
-              className="relative"
+              className=""
             >
               {/* Background images */}
               <div className="relative">
