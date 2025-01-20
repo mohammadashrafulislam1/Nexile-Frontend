@@ -18,7 +18,7 @@ const Header = () => {
                 console.error("Error fetching header data:", error);
             } finally {
                 // Set a timeout for loader to hide after 3 seconds if data fetch is complete
-        const timer = setTimeout(() => setLoading(false), 500);
+        const timer = setTimeout(() => setLoading(false), 200);
 
         return () => clearTimeout(timer); // Clear the timer on component unmount
             }
