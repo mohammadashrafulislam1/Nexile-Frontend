@@ -48,11 +48,12 @@ const Header = () => {
                 <SkeletonLoader />
             ) : (
                 <div className="navbar p-3 flex justify-between items-center">
+                    <Link to="/">
                     <img 
                         src={header[0]?.logo || ''} 
                         alt={`${header[0]?.title || ''} ${header[0]?.description || ''}`} 
                         className="w-[250px] h-[52px]"
-                    />
+                    /></Link>
                     <div className="text-white flex-none menu menu-horizontal px-3 gap-6 poppins-regular text-[18px] font-light hidden md:hidden lg:flex" 
                         style={{ textDecoration: 'none' }}>
                         {header[0]?.menu && header[0].menu.map(item => (
