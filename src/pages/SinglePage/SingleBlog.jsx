@@ -121,7 +121,7 @@ const SingleBlog = () =>{
              <div className="rounded-lg p-[2px] bg-gradient-to-r from-[#9DE8EE] via-[#FA7C0B] 
         to-[#9F8CED] shadow-lg hover:shadow-xl transition duration-300z-24 relative md:w-[90%] w-[96%]  mx-auto">
             <p 
-  className="text-white mx-auto bg-[#141414] md:p-10 p-4 rounded-lg md:text-[20px] text-[16px]" 
+  className="text-white mx-auto bg-[#141414] md:p-10 p-4 rounded-lg md:text-[20px] text-[16px] blog-description" 
   dangerouslySetInnerHTML={{ __html: blog?.description }}
 ></p>
 </div>
