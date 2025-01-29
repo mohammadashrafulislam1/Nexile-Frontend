@@ -107,6 +107,24 @@
     font-weight: 900;
     font-style: italic;
   }
+.blog-description h1{
+  font-size: 3.0rem;
+}
+.blog-description h2 {
+  font-size: 2.5rem;
+}
+.blog-description h3{
+  font-size: 2.0rem;
+}
+.blog-description h4 {
+  font-size: 1.5rem;
+}
+
+.blog-description h5{
+  font-size: 1.0rem;
+}
+
+
   @media screen and (max-width: 800px) {
     
     .sm-hidden {
@@ -119,6 +137,22 @@
     .hide{
       display: none;
     }
+      
+.blog-description h1{
+  font-size: 2.5rem;
+}
+.blog-description h2 {
+  font-size: 2.0rem;
+}
+.blog-description h3{
+  font-size: 1.5rem;
+}
+.blog-description h4 {
+  font-size: 1.0rem;
+}
+
+
+
   }
  /* For screens between 455px and 560px */
 @media screen and (max-width: 560px) and (min-width: 455px) { 
@@ -127,6 +161,7 @@
     padding-left: 100px !important;
     padding-right: 100px !important;
   }
+    
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -141,6 +176,21 @@
     padding: 2px; /* Further reduce padding for very small screens */
     border-radius: 5px; /* Optional: Adjust radius for smaller screens */
   }
+    
+.blog-description h1{
+  font-size: 2.5rem;
+}
+.blog-description h2 {
+  font-size: 2.0rem;
+}
+.blog-description h3{
+  font-size: 1.5rem;
+}
+.blog-description h4 {
+  font-size: 1.0rem;
+}
+
+
 }
 
 
