@@ -27,47 +27,47 @@ export const router = createBrowserRouter([
     },
     {
         path:'/blogs',
-        element:<Blogs/>,
+        element:<><ScrollToTop/><Blogs/></>,
         errorElement:<Error />
     },
     {
         path:'/about_us',
-        element:<AboutUs/>,
+        element:<><ScrollToTop/><AboutUs/></>,
         errorElement:<Error />
     },
     {
         path:'/what_we_do',
-        element:<WhatWeDo/>,
+        element:<><ScrollToTop/><WhatWeDo/></>,
         errorElement:<Error />
     },
     {
         path:'/faqs',
-        element:<Faqs/>,
+        element:<><ScrollToTop/><Faqs/></>,
         errorElement:<Error />
     },
     {
         path:'/projects',
-        element:<Projects/>,
+        element:<><ScrollToTop/><Projects/></>,
         errorElement:<Error />
     },
     {
         path:'/project/:title',
-        element:<SingleProject/>,
+        element:<><ScrollToTop/><SingleProject/></>,
         errorElement:<Error />,
     },
     {
         path:'/blog/:title',
-        element:<SingleBlog/>,
+        element:<><ScrollToTop/><SingleBlog/></>,
         errorElement:<Error />,
     },
     {
         path:'/service/:title',
-        element:<SingleService/>,
+        element:<><ScrollToTop/><SingleService/></>,
         errorElement:<Error />,
     },
     {
         path:'/team',
-        element:<Team/>,
+        element:<><ScrollToTop/><Team/></>,
         errorElement:<Error />,
     },
     
