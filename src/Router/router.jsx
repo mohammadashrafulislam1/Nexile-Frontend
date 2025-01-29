@@ -12,6 +12,7 @@ import { endPoint } from "../Components/ForAll/ForAll";
 import SingleBlog from "../pages/SinglePage/SingleBlog";
 import Team from "../pages/Team/Team";
 import SingleService from "../pages/SinglePage/SingleService";
+import ScrollToTop from "../Components/ForAll/ScrollToTop";
 
 export const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
     },
     {
         path:'/contact_us',
-        element:<ContactUs/>,
+        element: <><ScrollToTop/><ContactUs/></>,
         errorElement:<Error />
     },
     {
