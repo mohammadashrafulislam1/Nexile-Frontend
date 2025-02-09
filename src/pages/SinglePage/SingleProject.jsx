@@ -36,7 +36,7 @@ const SkeletonLoader = () => {
 };
 const SingleProject = () => {
   const { title } = useParams();
-const realUrl = title.replace(/-/g, " ");
+const realUrl = title.replace(/_/g, " ");
 const [work, setWork] = useState(null);
 const [categories, setCategories] = useState([]);
 const [loading, setLoading] = useState(true);
