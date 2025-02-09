@@ -140,7 +140,7 @@ const Works = () => {
                       <p className="text-[20px] text-[#00ECFB]">
                         {work.categoryName || "No category specified"}
                       </p>
-                      <Link to={`/project/${work.title.replace(/\s+/g, "-")}`}>
+                      <Link to={`/project/${work.title.replace(/\s+/g, "_")}`}>
                         <div className="md:text-[30px] text-[#fff] flex items-center gap-3 border-b-[2px] w-fit">
                           View This project
                           <LuMoveRight className="md:text-5xl font-[400]" />
