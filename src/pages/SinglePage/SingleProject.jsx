@@ -79,8 +79,6 @@ useEffect(() => {
 
   fetchCategoriesAndWorks();
 }, [realUrl]);
-  const tags = work?.metaKeywords?.length ? work.metaKeywords.join(", ");
-  console.log(work, "tags", tags)
 
   // Function to handle link click and show modal if the link is empty or '#'
   const handleLinkClick = (url) => {
@@ -91,6 +89,8 @@ useEffect(() => {
     return true; // Allow the link to open normally
   };
 
+  const tags = work?.metaKeywords?.length ? work.metaKeywords.join(", ");
+  console.log(work, "tags", tags)
   return (
     <div>
       {/* Helmet for SEO */}
