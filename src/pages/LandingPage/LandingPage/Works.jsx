@@ -33,6 +33,7 @@ const Works = () => {
       try {
         const worksResponse = await axios.get(`${endPoint}/works`);
         setWorks(worksResponse.data.works);
+        
       } catch (error) {
         console.error("Error fetching works:", error);
       } finally {
@@ -75,8 +76,8 @@ const Works = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 grid-cols-1 py-20 items-center">
-        <div className="md:col-span-1 md:mb-0 mb-40 relative z-10">
+      <div className="grid lg:grid-cols-3 grid-cols-1 py-20 items-center">
+        <div className="lg:col-span-1 md:mb-0 mb-40 relative z-10">
           {categories.map((category) => (
             <div
               key={category._id}
@@ -99,7 +100,7 @@ const Works = () => {
           />
         </div>
 
-        <div className="md:col-span-2 md:px-8 relative">
+        <div className="lg:col-span-2 md:px-8 relative md:mt-24 lg:mt-0">
           <div>
             <Swiper
               spaceBetween={30}
@@ -114,17 +115,17 @@ const Works = () => {
             >
               {filteredWorks.map((work) => (
                 <SwiperSlide key={work._id} className="p-4 rounded-lg shadow-md">
-                  <div className="md:flex items-center">
-                    <div className="relative md:w-[1080px] w-full md:h-[440px] overflow-visible">
+                  <div className="md:grid grid-cols-4 items-center lg:mb-4">
+                    <div className="col-span-3 relative w-full md:h-[440px] overflow-visible">
                       <img
                         src={
                           work?.images?.[0]?.url ||
                           "https://via.placeholder.com/150"
                         }
                         alt={work.title}
-                        className="md:w-[1080px] w-full md:h-[400px] object-cover rounded-[10px] mt-10"
+                        className="!md:w-[540px] w-full md:h-[420px] object-cover rounded-[10px] mt-10"
                       />
-                      <div className="absolute inset-0 bg-black bg-opacity-50 rounded-[10px] opacity-80 transition-opacity duration-300 flex items-center justify-center"></div>
+                      <div className="absolute md:h-[470px] inset-0 bg-black bg-opacity-50 rounded-[10px] opacity-80 transition-opacity duration-300 flex items-center justify-center"></div>
 
                       <img
                         src="https://res.cloudinary.com/dnwmtd4p1/image/upload/v1734276289/nexile%20digital/asset/fslpkycofr0yd2w0xjv5.webp"
@@ -133,13 +134,14 @@ const Works = () => {
                       />
                     </div>
 
-                    <div className="md:ml-[-107px] z-20">
+                    <div className="col-span-1 md:ml-[-120px] z-20">
                       <h3 className="mt-4 text-white poppins-semibold md:text-[49px] text-[29px]">
                         {work.title}
                       </h3>
                       <p className="text-[20px] text-[#00ECFB]">
-                        {work.categoryName || "No category specified"}
-                      </p>
+  {categories.find((cat) => cat._id === work.category)?.name || "No category specified"}
+</p>
+
                       <Link to={`/project/${work.title.replace(/\s+/g, "_")}`}>
                         <div className="md:text-[30px] text-[#fff] flex items-center gap-3 border-b-[2px] w-fit">
                           View This project

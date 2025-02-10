@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
       <div className=" pt-2 px-2">
         <div className="flex items-center justify-between mb-3">
         <CompletionDate completionDate={project.completionDate} />
-        <Link to={`/project/${project.title.replace(/\s+/g, "-")}`}>
+        <Link to={`/project/${project.title.replace(/\s+/g, "_")}`}>
   <div className="bg-[#0f0f0f] p-3 rounded-[10px]">
     <MdOutlineArrowOutward className="text-[25px]" />
   </div>
