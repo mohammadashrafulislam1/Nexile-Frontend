@@ -143,6 +143,7 @@ const ContactUs = () =>{
             </div>
 
              {/* Email  */}
+             <a href={`mailto:contact@nexiledigital.com`} target="_blank">
              <div className="flex items-center gap-3">
                 <div className="w-[35px] h-[35px] bg-[#FF0000] p-1 text-[30px] text-center flex justify-center items-center text-white rounded">
                 <RxEnvelopeClosed/>
@@ -152,6 +153,7 @@ const ContactUs = () =>{
                   <p className="text-white poppins-medium text-[16px] mt-[-5px]">contact@nexiledigital.com</p>
                 </div>
             </div>
+             </a>
       </div>
      </div>
 
