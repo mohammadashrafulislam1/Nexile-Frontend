@@ -89,8 +89,6 @@ useEffect(() => {
     return true; // Allow the link to open normally
   };
 
-  const tags = work?.metaKeywords?.length ? work.metaKeywords.join(", ") : "";
-  console.log("tags", tags);
   return (
     <div>
       {/* Helmet for SEO */}
@@ -177,7 +175,7 @@ useEffect(() => {
                <p className="text-white text-center poppins-light text-2xl">Project Timeline: <span className="poppins-semibold">{work?.projectTimeline}</span> days</p>
                <p className="text-white text-center poppins-light text-2xl">Completed in: {formatDate(work?.completionDate)}</p>
                
-<img src={work?.images[0].url} alt={work?.title - work?.categoryName} className="lg:w-full w-[98%] md:h-full mx-auto rounded-[10px] mt-10 object-cover"/>
+<img src={work?.images[0].url} alt={work?.title - work?.categoryName} className="lg:w-[720px] w-[98%] md:h-[533px] mx-auto rounded-[10px] mt-10 object-cover"/>
               
               </div>
             ) : (

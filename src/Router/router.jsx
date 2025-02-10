@@ -13,6 +13,7 @@ import SingleBlog from "../pages/SinglePage/SingleBlog";
 import Team from "../pages/Team/Team";
 import SingleService from "../pages/SinglePage/SingleService";
 import ScrollToTop from "../Components/ForAll/ScrollToTop";
+import Calendy from "../Components/ForAll/Calendy";
 
 export const router = createBrowserRouter([
     {
@@ -68,6 +69,11 @@ export const router = createBrowserRouter([
     {
         path:'/team',
         element:<><ScrollToTop/><Team/></>,
+        errorElement:<Error />,
+    },
+    {
+        path:'/book',
+        element:<><ScrollToTop/><Calendy/></>,
         errorElement:<Error />,
     },
     

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Hero =()=>{
     const [header, setHeader] = useState();
     const [loading, setLoading] = useState(true);
-
+    
     useEffect(() => {
         const fetchHeader = async () => {
             try {
@@ -52,10 +52,13 @@ const Hero =()=>{
              <h2 className="relative lg:text-[130px] text-[60px] font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40" 
              style={{letterSpacing:'-5px'}}>{header ? header[0]?.title :''}</h2>
             <p className="lg:text-[30px] text-[20px] text-white font-[100] text-center relative">{header? header[0]?.description :''}</p>
-            <div className="flex justify-center mt-10 relative">
+            <div className="flex gap-5 justify-center mt-10 relative">
                 <Link to={"/contact_us"}>
                 <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">Let’s Get Solution!</button></Link>
-            </div>
+                <a href={"/book"} target="_blank">
+                <button
+                className="border-white text-white border-2 lg:py-1 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">Book A Meeting</button>
+            </a></div>
            
 
            <div className="flex flex-wrap md:justify-center justify-start lt:gap-12 gap-4 lg:mt-20 mt-10 px-20">
@@ -119,7 +122,6 @@ const Hero =()=>{
             </div>
 
            </div>
-           
             </div>
             
         )

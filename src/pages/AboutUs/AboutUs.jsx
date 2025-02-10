@@ -66,17 +66,21 @@ const AboutUs = () =>{
      
 
      <div className="md:h-[1040px] h-full">
-     <h2 className="lg:text-[130px] text-[50px] md:px-4 px-1 mb-2 font-bold lg:leading-[130px] leading-[60px] text-white text-center uppercase z-40 relative" 
+     <h2 className="lg:text-[130px] text-[50px] md:px-4 px-1 mb-2 font-bold lg:leading-[110px] leading-[60px] text-white text-center uppercase z-40 relative" 
              style={{letterSpacing:'-5px'}}>{about?.sectionTitle}</h2>
       <p className="lg:text-[30px] text-[18px] md:px-4 px-2 text-white font-[100] text-center z-40 relative">{about?.intro?.tagline}</p>
        {/* Section Description */}
         <div className="mt-2">
          <p className="text-[15px] md:text-[18px] md:px-24 p-3 rounded-lg text-white z-40 relative">{about?.sectionDes}</p>
         </div>
-        <Link to={"/contact_us"} className="flex justify-center my-4 z-40 relative">
-        <button className="bg-white mb-4 lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
-            Let’s Get Solution!</button></Link>
-            
+        <div className="flex gap-5 justify-center relative">
+                <Link to={"/contact_us"}>
+                <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">Let’s Get Solution!</button></Link>
+                <a href={"/book"} target="_blank">
+                <button
+                className="border-white text-white border-2 lg:py-1 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">Book A Meeting</button>
+            </a></div>
+           
       {/* Black shadow at the bottom */}
       <div
         className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black to-transparent z-1"

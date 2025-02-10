@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { endPoint } from "../../Components/ForAll/ForAll";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import Calendy from "../../Components/ForAll/Calendy";
 
 const ContactUs = () =>{
 
@@ -287,7 +288,7 @@ const ContactUs = () =>{
   </div>
 </div>  
      </div>
-
+   <Calendy />
        
       <Footer className="!z-24"/>
       </div>

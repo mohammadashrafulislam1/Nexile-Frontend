@@ -112,10 +112,14 @@ const Blogs = () => {
               <p className="lg:text-[30px] text-[20px] text-white font-[100] text-center">
                 Learn more about digital solutions by reading our blogs
               </p>
-              <Link to={"/contact_us"} className="flex justify-center my-4">
-        <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">
-            Contact Us!</button></Link>
-           
+              <div className="flex gap-5 justify-center mt-10 relative">
+                <Link to={"/contact_us"}>
+                <button className="bg-white lg:py-2 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">Contact Us!</button></Link>
+                <a href={"/book"} target="_blank">
+                <button
+                className="border-white text-white border-2 lg:py-1 lg:px-7 px-4 py-2 text-[20px] rounded-sm poppins-medium lg:text-[25px]">Book A Meeting</button>
+            </a></div>
+          
             </div>
 
             {/* Black shadow at the bottom */}

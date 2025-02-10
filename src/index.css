@@ -130,7 +130,9 @@
   font-size: 1.0rem;
 }
 
-
+.calendly-inline-widget iframe {
+  filter: invert(1); /* Inverts colors for a dark theme */
+}
   @media screen and (max-width: 800px) {
     
     .sm-hidden {
