@@ -79,8 +79,8 @@ useEffect(() => {
 
   fetchCategoriesAndWorks();
 }, [realUrl]);
-
-  console.log(work)
+  const tags = work?.metaKeywords?.length ? work.metaKeywords.join(", ");
+  console.log(work, "tags", tags)
 
   // Function to handle link click and show modal if the link is empty or '#'
   const handleLinkClick = (url) => {
@@ -95,12 +95,12 @@ useEffect(() => {
     <div>
       {/* Helmet for SEO */}
       <Helmet>
-        <title>{realUrl} by Nexile Digital</title>
-        <meta
-          name="description"
-          content={`${realUrl} - Projects that Nexile Digital built. Nexile Digital is an all-in-one digital solutions provider offering web development, web design, SEO (Search Engine Optimization), Video Editing, UX & UI Design, and Figma services.`}
-        ></meta>
-      </Helmet>
+  <title>{realUrl} by Nexile Digital</title>
+  <meta name="description" content={work?.metaDescription || "Nexile Digital Project"} />
+  <meta name="title" content={work?.metaTitle || "Nexile Digital"} />
+  <meta name="keywords" content={work?.metaKeywords?.length ? work.metaKeywords.join(", ") : "Nexile Digital"} />
+</Helmet>
+
 
       <div className="bg-black overflow-hidden">
         <div className="relative z-0 bg-black">
