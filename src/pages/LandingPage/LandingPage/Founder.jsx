@@ -113,7 +113,7 @@ const Founder = () => {
               <h2 className="text-white poppins-semibold underline md:text-3xl text-2xl mb-0 uppercase lg:pr-[630px] md:pr-[550px] pr-[400px] 
               text-right ml-[-100px] md:mt-0 mt-1 md:z-10 z-0">{founder ? founder[0]?.founderName:''}</h2>
              </div>
-             <div className="lg:mr-[-160px] mr-[-56px] relative !z-0">
+             <div className="lg:mr-[-160px] lg:ml-[80px] mr-[-56px] relative !z-0">
   {/* Primary Founder Image */}
   <img
     src={founder ? founder[0]?.founderImage : ""}
