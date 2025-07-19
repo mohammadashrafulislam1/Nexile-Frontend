@@ -118,7 +118,7 @@ const Founder = () => {
   <img
     src={founder ? founder[0]?.founderImage : ""}
     alt={founder ? founder[0]?.founderName : ""}
-    className="relative z-20" // Ensure this is above the decorative image
+    className="relative z-20 w-[90%]" // Ensure this is above the decorative image
   />
 
   {/* Decorative Image Overlay */}
