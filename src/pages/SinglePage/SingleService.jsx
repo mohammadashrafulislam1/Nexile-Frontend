@@ -41,14 +41,55 @@ const SingleService = () =>{
 
     return(
         <div >
-        {/* Helmet for SEO */}
-        <Helmet>
-          <title>{realUrl} by Nexile Digital</title>
-          <meta
-            name="description"
-            content={`${realUrl} - Projects that Nexile Digital built. Nexile Digital is an all-in-one digital solutions provider offering web development, web design, SEO (Search Engine Optimization), Video Editing, UX & UI Design, and Figma services.`}
-          ></meta>
-        </Helmet>
+       <Helmet>
+  {/* Title tag for browser + SEO */}
+  <title>{`${realUrl} by Nexile Digital`}</title>
+
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content={`${realUrl} - Projects that Nexile Digital built. Nexile Digital is an all-in-one digital solutions provider offering web development, web design, SEO, video editing, UX & UI design, and Figma services.`}
+  />
+
+  {/* Canonical URL (recommended for SEO) */}
+  <link rel="canonical" href={`https://nexiledigital.com/services/${realUrl}`} />
+
+  {/* Keywords Meta Tag */}
+  <meta
+    name="keywords"
+    content={[
+      realUrl.toLowerCase(), // adds dynamic keyword from title
+      "web development",
+      "SEO",
+      "UI/UX design",
+      "Nexile Digital",
+      "digital services",
+      "software solutions",
+      "graphic design",
+      "video editing"
+    ].join(", ")}
+  />
+
+  {/* Open Graph for social sharing */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={`${realUrl} by Nexile Digital`} />
+  <meta
+    property="og:description"
+    content={`${realUrl} - Projects that Nexile Digital built. Nexile Digital is an all-in-one digital solutions provider offering web development, web design, SEO, video editing, UX & UI design, and Figma services.`}
+  />
+  <meta property="og:image" content={service?.mainServiceImage || "https://nexiledigital.com/default-og-image.jpg"} />
+  <meta property="og:url" content={`https://nexiledigital.com/services/${realUrl}`} />
+
+  {/* Twitter Card for social preview */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={`${realUrl} by Nexile Digital`} />
+  <meta
+    name="twitter:description"
+    content={`${realUrl} - Projects that Nexile Digital built. Nexile Digital is an all-in-one digital solutions provider offering web development, web design, SEO, video editing, UX & UI design, and Figma services.`}
+  />
+  <meta name="twitter:image" content={service?.mainServiceImage} />
+</Helmet>
+
   
         <div className="bg-black overflow-hidden  w-screen">
           <div className="relative z-0 bg-black">
