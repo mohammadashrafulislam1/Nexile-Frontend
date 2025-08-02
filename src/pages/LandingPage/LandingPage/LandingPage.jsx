@@ -30,6 +30,7 @@ const LandingPage = () => {
     "digital services",
     "UI UX design",
     "video editing",
+    "top-rated web development agency", "professional SEO services", "expert UI UX design team",
   ];
 
   const dynamicKeywords = locationData
@@ -40,7 +41,7 @@ const LandingPage = () => {
         `digital agency in ${locationData.region}`,
         `freelance web developer in ${locationData.country_name}`,
       ]
-    : [];
+    : ["top-rated web development agency", "professional SEO services", "expert UI UX design team"];
 
   const allKeywords = [...defaultKeywords, ...dynamicKeywords];
 console.log(allKeywords)
@@ -49,6 +50,7 @@ console.log(allKeywords)
       {/* Helmet */}
       <Helmet>
         <title>Nexile Digital – Full Stack Digital Solutions</title>
+        <meta property="og:title" content="Nexile Digital – Full Stack Digital Solutions" />
         <meta
           name="description"
           content="Nexile Digital is an all-in-one digital solution provider. We offer web development, SEO, UI/UX design, and more."
