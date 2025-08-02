@@ -43,7 +43,7 @@ const LandingPage = () => {
     : [];
 
   const allKeywords = [...defaultKeywords, ...dynamicKeywords];
-
+console.log(allKeywords)
   return (
     <div>
       {/* Helmet */}
