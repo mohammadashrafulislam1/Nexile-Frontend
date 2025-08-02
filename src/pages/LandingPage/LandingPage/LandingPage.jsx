@@ -43,7 +43,8 @@ const LandingPage = () => {
       ]
     : ["top-rated web development agency", "professional SEO services", "expert UI UX design team"];
 
-  const allKeywords = [...defaultKeywords, ...dynamicKeywords];
+const allKeywords = Array.from(new Set([...defaultKeywords, ...dynamicKeywords]));
+
 console.log(allKeywords)
   return (
     <div>
