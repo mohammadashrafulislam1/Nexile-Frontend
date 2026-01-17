@@ -14,7 +14,6 @@ import Team from "../pages/Team/Team";
 import SingleService from "../pages/SinglePage/SingleService";
 import ScrollToTop from "../Components/ForAll/ScrollToTop";
 import Calendy from "../Components/ForAll/Calendy";
-import UserEstimator from "../pages/UserEstimatePage/UserEstimatePage";
 
 export const router = createBrowserRouter([
     {
@@ -77,11 +76,11 @@ export const router = createBrowserRouter([
         element:<><ScrollToTop/><Calendy/></>,
         errorElement:<Error />,
     },
-    {
-        path:'/estimate-pricing',
-        element:<><ScrollToTop/><UserEstimator/></>,
-        errorElement:<Error />,
-    },
+    // {
+    //     path:'/estimate-pricing',
+    //     element:<><ScrollToTop/><UserEstimator/></>,
+    //     errorElement:<Error />,
+    // },
     
 
 
