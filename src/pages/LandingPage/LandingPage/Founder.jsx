@@ -7,6 +7,22 @@ const Founder = () => {
   const [founder, setFounder] = useState();
   const [loading, setLoading] = useState(true);
 
+  function useMediaQuery(query) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    const update = () => setMatches(media.matches);
+
+    update();
+    media.addEventListener("change", update);
+
+    return () => media.removeEventListener("change", update);
+  }, [query]);
+
+  return matches;
+}
+
   useEffect(() => {
     const fetchFounder = async () => {
       try {
@@ -41,6 +57,8 @@ const Founder = () => {
       </div>
     </div>
   );
+
+  const isAbove1540 = useMediaQuery("(min-width: 1540px)");
 
   return (
     <div>
@@ -105,14 +123,41 @@ const Founder = () => {
   <span className="bg-[#00ECFB] w-2 h-2 ml-2 rounded-sm inline-block"></span>
 </h5>
 </a>
-             <div className="flex absolute md:gap-0 gap-6 md:bottom-[38%] lg:bottom-[29%] bottom-[35%] md:left-[70px] lg:left-[150px] lg:z-30 md:z-50">
-              <div className="mr-[-2px] margin_top">
-              <h6 className="text-white poppins-semibold text-xl md:mb-0">{founder ? founder[0]?.experience :''} YEARS</h6>
-              <p className="text-white poppins-light md:text-lg text-md mt-[-10px]">experience</p>
-              </div>
-              <h2 className="hero-name text-white poppins-semibold underline md:text-3xl text-2xl mb-0 uppercase lg:pr-[630px] md:pr-[550px] pr-[400px] 
-              text-right ml-[-100px] md:mt-0 mt-1 md:z-10 z-0">{founder ? founder[0]?.founderName:''}</h2>
-             </div>
+              <>
+    {!isAbove1540 ? (
+      // ===== OLD DESIGN (<1540px) =====
+      <div className="flex absolute md:gap-0 gap-6 md:bottom-[38%] lg:bottom-[29%] bottom-[35%] md:left-[70px] lg:left-[150px] lg:z-30 md:z-50">
+        <div className="mr-[-2px] margin_top">
+          <h6 className="text-white poppins-semibold text-xl md:mb-0">
+            {founder ? founder[0]?.experience : ""} YEARS
+          </h6>
+          <p className="text-white poppins-light md:text-lg text-md mt-[-10px]">
+            experience
+          </p>
+        </div>
+
+        <h2 className="hero-name text-white poppins-semibold underline md:text-3xl text-2xl mb-0 uppercase lg:pr-[630px] md:pr-[550px] pr-[400px] text-right ml-[-100px] md:mt-0 mt-1 md:z-10 z-0">
+          {founder ? founder[0]?.founderName : ""}
+        </h2>
+      </div>
+    ) : (
+      // ===== NEW DESIGN (>=1540px) =====
+      <div className="flex absolute md:gap-6 gap-6 md:bottom-[38%] lg:bottom-[29%] bottom-[35%] md:left-[70px] lg:left-[150px] lg:z-30 md:z-50 items-end">
+        <div className="flex flex-col">
+          <h6 className="text-white poppins-semibold text-xl">
+            {founder ? founder[0]?.experience : ""} YEARS
+          </h6>
+          <p className="text-white poppins-light md:text-lg text-md mt-[-10px]">
+            experience
+          </p>
+        </div>
+
+        <h2 className="hero-name text-white poppins-semibold underline md:text-3xl text-2xl uppercase whitespace-nowrap">
+          {founder ? founder[0]?.founderName : ""}
+        </h2>
+      </div>
+    )}
+  </>
              <div className="lg:mr-[-160px] lg:ml-[80px] mr-[-56px] relative !z-0">
   {/* Primary Founder Image */}
   <img
