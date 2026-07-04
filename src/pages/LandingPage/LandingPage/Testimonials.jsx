@@ -50,11 +50,11 @@ const Testimonials = () => {
   return (
     <div className="lg:py-5 relative py-8 overflow-hidden">
       <div className="px-8 lg:flex justify-end items-center">
-        <h2 className="text-white lg:w-[90%] lg:pt-20 lg:text-[120px] text-[40px] uppercase font-bold underline lg:leading-[160px] leading-[40px]">
+        <h2 className="text-white lg:w-[60%] lg:pt-20 lg:text-[120px] text-[40px] uppercase font-bold underline lg:leading-[160px] leading-[40px]">
           What our clients are saying
         </h2>
-        <div className="lg:w-[30%]">
-          <p className="font-[100] text-white text-[20px] md:mt-0 mt-4 lg:ml-[-200px]">
+        <div className="lg:w-[40%]">
+          <p className="font-[100] text-white text-[20px] md:mt-0 mt-4 ">
             We have collaborated with or worked with them and helped them grow
             their business. With the help of Nexile Digital, you can also
             grow/boost your business.
