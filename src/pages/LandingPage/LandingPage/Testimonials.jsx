@@ -54,7 +54,7 @@ const Testimonials = () => {
           What our clients are saying
         </h2>
         <div className="lg:w-[30%]">
-          <p className="font-[100] text-white text-[20px] md:mt-0 mt-4 lg:ml-[-200px] margin_left">
+          <p className="font-[100] text-white text-[20px] md:mt-0 mt-4 lg:ml-[-200px]">
             We have collaborated with or worked with them and helped them grow
             their business. With the help of Nexile Digital, you can also
             grow/boost your business.
