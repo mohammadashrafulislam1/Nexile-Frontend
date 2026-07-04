@@ -106,7 +106,7 @@ const Blogs = () => {
           otherCategoryBlogs.map((blog) => (
             <div
               key={blog._id}
-              className="rounded-lg shadow-md mb-6 flex md:flex-row flex-col justify-center items-center
+              className="rounded-lg shadow-md mb-6 flex md:flex-row flex-col items-center
                gap-8 mt-10 z-24 px-8  md:px-0 relative"
             >
                 <img src={blog.image} alt="" className="md:w-[200px] w-full md:h-[188px] rounded-[10px]" />
