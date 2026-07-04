@@ -178,7 +178,11 @@
     background-size: contain; /* Ensures the image is fully visible */
   }
 }
-
+@media (max-width: 1580px) {
+  .margin_left {
+    margin-left: 0;
+  }
+}
 @media (max-width: 480px) {
   .surface-duo2 {
     padding: 2px; /* Further reduce padding for very small screens */
