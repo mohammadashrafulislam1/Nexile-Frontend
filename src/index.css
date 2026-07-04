@@ -183,6 +183,12 @@
     margin-left: 0 !important;
   }
 }
+
+    @media (max-width: 1536px) {
+  .margin_top {
+    margin-top: 50px !important;
+  }
+}
 @media (max-width: 480px) {
   .surface-duo2 {
     padding: 2px; /* Further reduce padding for very small screens */
