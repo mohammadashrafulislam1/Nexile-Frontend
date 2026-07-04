@@ -12,7 +12,7 @@ import FAQs from "./FAQs";
 import ContactBtn from "./ContactBtn";
 import Blogs from "./Blogs";
 import Footer from "../../../Components/ForAll/Footer";
-import ""../../../index.css"
+import "../../../index.css"
 
 const LandingPage = () => {
   const [locationData, setLocationData] = useState(null);
