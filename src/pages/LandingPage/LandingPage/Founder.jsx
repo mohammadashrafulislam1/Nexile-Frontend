@@ -106,7 +106,7 @@ const Founder = () => {
 </h5>
 </a>
              <div className="flex absolute md:gap-0 gap-6 md:bottom-[38%] lg:bottom-[29%] bottom-[35%] md:left-[70px] lg:left-[150px] lg:z-30 md:z-50">
-              <div className="mr-[-2px]">
+              <div className="mr-[-2px] margin_top">
               <h6 className="text-white poppins-semibold text-xl md:mb-0">{founder ? founder[0]?.experience :''} YEARS</h6>
               <p className="text-white poppins-light md:text-lg text-md mt-[-10px]">experience</p>
               </div>
