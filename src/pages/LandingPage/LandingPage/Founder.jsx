@@ -110,7 +110,7 @@ const Founder = () => {
               <h6 className="text-white poppins-semibold text-xl md:mb-0">{founder ? founder[0]?.experience :''} YEARS</h6>
               <p className="text-white poppins-light md:text-lg text-md mt-[-10px]">experience</p>
               </div>
-              <h2 className="text-white poppins-semibold underline md:text-3xl text-2xl mb-0 uppercase lg:pr-[630px] md:pr-[550px] pr-[400px] 
+              <h2 className="hero-name text-white poppins-semibold underline md:text-3xl text-2xl mb-0 uppercase lg:pr-[630px] md:pr-[550px] pr-[400px] 
               text-right ml-[-100px] md:mt-0 mt-1 md:z-10 z-0">{founder ? founder[0]?.founderName:''}</h2>
              </div>
              <div className="lg:mr-[-160px] lg:ml-[80px] mr-[-56px] relative !z-0">
